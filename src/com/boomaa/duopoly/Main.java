@@ -7,23 +7,23 @@ import com.boomaa.duopoly.spaces.ChanceSpace;
 import com.boomaa.duopoly.spaces.CommunityChestSpace;
 import com.boomaa.duopoly.spaces.GoToJailSpace;
 import com.boomaa.duopoly.spaces.JailSpace;
+import com.boomaa.duopoly.spaces.PaymentSpace;
 import com.boomaa.duopoly.spaces.PropertySpace;
 import com.boomaa.duopoly.spaces.PropertySpace.Color;
 import com.boomaa.duopoly.spaces.RailroadSpace;
 import com.boomaa.duopoly.spaces.Space;
-import com.boomaa.duopoly.spaces.PaymentSpace;
 import com.boomaa.duopoly.spaces.UtilitySpace;
 
 import java.util.NoSuchElementException;
 
 public class Main {
-    public final static Player[] PLAYERS = new Player[]{
+    public static final Player[] PLAYERS = new Player[]{
             new HumanPlayer(),
             new ComputerPlayer(),
             new ComputerPlayer(),
             new ComputerPlayer()
     };
-    public final static Space[] BOARD = new Space[]{
+    public static final Space[] BOARD = new Space[]{
             new PaymentSpace("GO", 200),
             new PropertySpace("Mediterranean Avenue", 60, Color.BROWN, 2, 10, 30, 90, 160, 250),
             CommunityChestSpace.getInstance(),
@@ -65,6 +65,9 @@ public class Main {
             new PaymentSpace("Luxury Tax", -100),
             new PropertySpace("Boardwalk", 400, Color.BLUE, 50, 200, 600, 1400, 1700, 2000)
     };
+
+    private Main() {
+    }
 
     public static void main(String[] args) {
         int numBankruptPlayers = 0;

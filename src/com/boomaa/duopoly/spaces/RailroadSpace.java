@@ -13,8 +13,8 @@ public class RailroadSpace extends OwnableSpace<OwnableSpace.SingleGroupIdentifi
     @Override
     public int getRent(DiceRoll roll, boolean ownsGroup, Player p) {
         int numRailroadsOwned = (int) p.getOwnedSpaces().stream()
-                .filter(spc -> spc.getGroupIdentifier().equals(getGroupIdentifier()))
-                .count();
+            .filter(spc -> spc.getGroupIdentifier().equals(getGroupIdentifier()))
+            .count();
         return DEFAULT_RAILROAD_RENTS[numRailroadsOwned];
     }
 

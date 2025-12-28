@@ -10,8 +10,6 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.OptionalInt;
-import java.util.stream.IntStream;
 
 public class RandomCardSpace extends Space {
     private final List<RandomCard> shuffledCards;

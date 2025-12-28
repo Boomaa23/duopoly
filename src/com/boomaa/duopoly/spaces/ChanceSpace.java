@@ -12,17 +12,17 @@ public class ChanceSpace extends RandomCardSpace {
                     ActionType.GOTO_SPACE, Main.spaceNameToPosition("Illinois Avenue")),
             new RandomCard("Advance to St. Charles Place. If you pass Go, collect $200.",
                     ActionType.GOTO_SPACE, Main.spaceNameToPosition("St. Charles Place")),
-            new RandomCard("Advance token to the nearest Utility. " +
-                    "If unowned, you may buy it from the Bank. " +
-                    "If owned, throw dice and pay owner a total 10 (ten) times the amount thrown.",
+            new RandomCard("Advance token to the nearest Utility. "
+                    + "If unowned, you may buy it from the Bank. "
+                    + "If owned, throw dice and pay owner a total 10 (ten) times the amount thrown.",
                     ActionType.GOTO_NEAR_UTIL),
-            new RandomCard("Advance to the nearest Railroad. " +
-                    "If unowned, you may buy it from the Bank. " +
-                    "If owned, pay owner twice the rent to which they are otherwise entitled.",
+            new RandomCard("Advance to the nearest Railroad. "
+                    + "If unowned, you may buy it from the Bank. "
+                    + "If owned, pay owner twice the rent to which they are otherwise entitled.",
                     ActionType.GOTO_NEAR_RR),
-            new RandomCard("Advance to the nearest Railroad. " +
-                    "If unowned, you may buy it from the Bank. " +
-                    "If owned, pay owner twice the rent to which they are otherwise entitled.",
+            new RandomCard("Advance to the nearest Railroad. "
+                    + "If unowned, you may buy it from the Bank. "
+                    + "If owned, pay owner twice the rent to which they are otherwise entitled.",
                     ActionType.GOTO_NEAR_RR),
             new RandomCard("Bank pays you dividend of $50.", ActionType.CHANGE_MONEY, 50),
             new RandomCard("Get Out of Jail Free - This card may be kept until needed or sold/traded.", ActionType.JAIL_FREE),

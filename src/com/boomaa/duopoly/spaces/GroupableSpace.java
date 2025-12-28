@@ -12,7 +12,7 @@ public interface GroupableSpace<T extends Space.GroupIdentifier> {
     default Stream<? extends OwnableSpace<?>> spacesInGroupStream() {
         return Arrays.stream(Main.BOARD)
                 .filter(spc -> spc instanceof OwnableSpace)
-                .map(spc -> (OwnableSpace<?>)spc)
+                .map(spc -> (OwnableSpace<?>) spc)
                 .filter(spc -> getGroupIdentifier().equals(spc.getGroupIdentifier()));
     }
 
