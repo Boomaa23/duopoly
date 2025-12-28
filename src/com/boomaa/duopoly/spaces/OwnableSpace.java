@@ -45,6 +45,7 @@ public abstract class OwnableSpace<T extends Space.GroupIdentifier> extends Spac
         this.mortgaged = mortgaged;
     }
 
+    @Override
     public void doAction(Player p, DiceRoll roll) {
         if (isOwned()) {
             if (p.getOwnedSpaces().contains(this)) {
@@ -57,7 +58,6 @@ public abstract class OwnableSpace<T extends Space.GroupIdentifier> extends Spac
                 int rent = getRent(roll, ownsSet, p);
                 p.changeMoney(-rent);
                 propOwner.changeMoney(rent);
-                //TODO support bankruptcy here
             }
         } else if (p.choosePurchase(this)) {
             /* Property is not yet owned and current player chose to buy the property */

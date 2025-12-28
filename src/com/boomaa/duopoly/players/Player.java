@@ -67,6 +67,7 @@ public abstract class Player {
 
     public int changeMoney(int diff) {
         this.money += diff;
+        //TODO support bankruptcy here
         return money;
     }
 
