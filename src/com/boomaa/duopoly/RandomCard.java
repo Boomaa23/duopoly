@@ -1,11 +1,5 @@
 package com.boomaa.duopoly;
 
-import com.boomaa.duopoly.players.Player;
-import com.boomaa.duopoly.spaces.OwnableSpace;
-import com.boomaa.duopoly.spaces.PropertySpace;
-
-import java.util.Arrays;
-
 public class RandomCard {
     private final String text;
     private final ActionType actionType;
@@ -23,6 +17,10 @@ public class RandomCard {
         this(text, actionType, amount, -1);
     }
 
+    public RandomCard(String text, ActionType actionType) {
+        this(text, actionType, -1, -1);
+    }
+
     public String getText() {
         return text;
     }
@@ -38,6 +36,4 @@ public class RandomCard {
     public int getSecondAmount() {
         return secondAmount;
     }
-
-
 }

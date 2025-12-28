@@ -1,10 +1,13 @@
 package com.boomaa.duopoly;
 
 public enum ActionType {
-    GAIN_MONEY,
-    LOSE_MONEY,
+    CHANGE_MONEY,
     JAIL_FREE,
-    TO_JAIL,
-    GAIN_MONEY_PER_PLAYER,
-    LOSE_MONEY_PER_BLDG
+    GOTO_JAIL,
+    CHANGE_MONEY_PER_PLAYER,
+    CHANGE_MONEY_PER_BLDG,
+    GOTO_SPACE,
+    GOTO_REL,
+    GOTO_NEAR_UTIL,
+    GOTO_NEAR_RR
 }

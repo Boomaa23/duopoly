@@ -50,7 +50,7 @@ public abstract class OwnableSpace<T extends Space.GroupIdentifier> extends Spac
         if (isOwned()) {
             if (p.getOwnedSpaces().contains(this)) {
                 /* Property is owned by current player */
-                //TODO
+                //TODO building logic
             } else {
                 /* Property is not owned by current player, pay owner player */
                 Player propOwner = getOwner();

@@ -14,6 +14,8 @@ import com.boomaa.duopoly.spaces.Space;
 import com.boomaa.duopoly.spaces.PaymentSpace;
 import com.boomaa.duopoly.spaces.UtilitySpace;
 
+import java.util.NoSuchElementException;
+
 public class Main {
     public final static Player[] PLAYERS = new Player[]{
             new HumanPlayer(),
@@ -93,5 +95,23 @@ public class Main {
 
     public static Space positionToSpace(int position) {
         return BOARD[position % BOARD.length];
+    }
+
+    public static int spaceNameToPosition(String name) {
+        for (int i = 0; i < BOARD.length; i++) {
+            if (BOARD[i].getName().equals(name)) {
+                return i;
+            }
+        }
+        throw new NoSuchElementException("No space on board named " + name);
+    }
+
+    public static Space spaceNameToSpace(String name) {
+        for (Space spc : BOARD) {
+            if (spc.getName().equals(name)) {
+                return spc;
+            }
+        }
+        throw new NoSuchElementException("No space on board named " + name);
     }
 }
