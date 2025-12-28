@@ -71,6 +71,12 @@ public abstract class Player {
         return money;
     }
 
+    //TODO finish this; part of bankruptcy logic
+    public static boolean mortgagePropertyUntil(Player p, int cost) {
+        while (cost > p.getMoney() && p.mortgageSingleProperty()) {}
+        return cost < p.getMoney();
+    }
+
     public boolean hasJailFreeCard() {
         return jailFreeCards > 0;
     }
