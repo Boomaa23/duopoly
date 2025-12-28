@@ -29,6 +29,10 @@ public abstract class Player {
 
     public abstract boolean choosePurchase(OwnableSpace<?> ownSpc);
 
+    public abstract boolean chooseUseJailFreeCard();
+
+    public abstract boolean choosePayForJail();
+
     public abstract boolean mortgageSingleProperty();
 
     public boolean isBankrupt() {
