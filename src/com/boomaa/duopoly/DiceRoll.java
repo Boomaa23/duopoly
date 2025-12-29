@@ -7,10 +7,14 @@ public class DiceRoll {
     private final boolean doubles;
 
     public DiceRoll() {
-        this.dieOne = (int) (Math.random() * 6);
-        this.dieTwo = (int) (Math.random() * 6);
+        this.dieOne = rollSingleDie();
+        this.dieTwo = rollSingleDie();
         this.total = dieOne + dieTwo;
         this.doubles = dieOne == dieTwo;
+    }
+
+    private int rollSingleDie() {
+        return (int) (Math.random() * 6) + 1;
     }
 
     public int getDieOne() {

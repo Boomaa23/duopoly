@@ -1,18 +1,19 @@
 package com.boomaa.duopoly.spaces;
 
 import com.boomaa.duopoly.DiceRoll;
-import com.boomaa.duopoly.Main;
+import com.boomaa.duopoly.SpaceName;
 import com.boomaa.duopoly.players.Player;
 
-import java.util.NoSuchElementException;
-
 public class JailSpace extends Space {
-    public static final int JAIL_POS = findJailPos();
     private static final int MAX_JAIL_TURNS = 3;
     private static final int JAIL_PAYMENT = 50;
 
+    public JailSpace(SpaceName name) {
+        super(name);
+    }
+
     public JailSpace() {
-        super("Jail");
+        this(SpaceName.JAIL);
     }
 
     @Override
@@ -32,14 +33,5 @@ public class JailSpace extends Space {
                 p.resetJailTurns();
             }
         }
-    }
-
-    private static int findJailPos() {
-        for (int i = 0; i < Main.BOARD.length; i++) {
-            if (Main.BOARD[i] instanceof JailSpace) {
-                return i;
-            }
-        }
-        throw new NoSuchElementException("No jail found in board");
     }
 }

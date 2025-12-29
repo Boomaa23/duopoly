@@ -1,6 +1,7 @@
 package com.boomaa.duopoly.spaces;
 
 import com.boomaa.duopoly.DiceRoll;
+import com.boomaa.duopoly.SpaceName;
 import com.boomaa.duopoly.players.Player;
 
 public class PropertySpace extends OwnableSpace<PropertySpace.Color> {
@@ -9,7 +10,7 @@ public class PropertySpace extends OwnableSpace<PropertySpace.Color> {
     private final int[] rents;
     private int buildings;
 
-    public PropertySpace(String name, int cost, Color color, int... rents) {
+    public PropertySpace(SpaceName name, int cost, Color color, int... rents) {
         super(name, cost);
         this.color = color;
         this.rents = rents;

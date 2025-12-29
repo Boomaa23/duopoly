@@ -1,12 +1,13 @@
 package com.boomaa.duopoly.spaces;
 
 import com.boomaa.duopoly.DiceRoll;
+import com.boomaa.duopoly.SpaceName;
 import com.boomaa.duopoly.players.Player;
 
 public class RailroadSpace extends OwnableSpace<OwnableSpace.SingleGroupIdentifier> {
     public static final int[] DEFAULT_RAILROAD_RENTS = new int[]{ 0, 25, 50, 100, 200 };
 
-    public RailroadSpace(String name, int cost) {
+    public RailroadSpace(SpaceName name, int cost) {
         super(name, cost);
     }
 

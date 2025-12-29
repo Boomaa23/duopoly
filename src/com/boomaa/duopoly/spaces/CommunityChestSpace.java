@@ -2,6 +2,7 @@ package com.boomaa.duopoly.spaces;
 
 import com.boomaa.duopoly.ActionType;
 import com.boomaa.duopoly.RandomCard;
+import com.boomaa.duopoly.SpaceName;
 
 public class CommunityChestSpace extends RandomCardSpace {
     private static final CommunityChestSpace INSTANCE = new CommunityChestSpace();
@@ -28,7 +29,7 @@ public class CommunityChestSpace extends RandomCardSpace {
     };
 
     private CommunityChestSpace() {
-        super("Community Chest", ALL_CARDS);
+        super(SpaceName.COMMUNITY_CHEST, ALL_CARDS);
     }
 
     public static CommunityChestSpace getInstance() {

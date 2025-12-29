@@ -2,6 +2,7 @@ package com.boomaa.duopoly.spaces;
 
 import com.boomaa.duopoly.DiceRoll;
 import com.boomaa.duopoly.Main;
+import com.boomaa.duopoly.SpaceName;
 import com.boomaa.duopoly.players.Player;
 
 import java.util.Arrays;
@@ -12,7 +13,7 @@ public abstract class OwnableSpace<T extends Space.GroupIdentifier> extends Spac
     protected boolean mortgaged;
     private Player owner;
 
-    public OwnableSpace(String name, int cost) {
+    public OwnableSpace(SpaceName name, int cost) {
         super(name);
         this.cost = cost;
         this.owner = null;
