@@ -8,7 +8,6 @@ public interface GroupableSpace<T extends Space.GroupIdentifier> {
 
     default boolean playerOwnsGroup(Player p) {
         return BoardManager.groupToSpaces(getGroupIdentifier()).stream()
-                .map(spc -> (OwnableSpace<?>) spc)
-                .allMatch(spc -> p.equals(spc.getOwner()));
+                .allMatch(spc -> p.equals(((OwnableSpace<?>) spc).getOwner()));
     }
 }
